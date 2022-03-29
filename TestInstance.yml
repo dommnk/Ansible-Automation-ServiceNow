@@ -13,7 +13,7 @@
         key_name: "example-ssh-key"
         region: eu-central-1
         vpc_subnet_id: "{{ vpc_subnet_id }}"
-        instance_type: t3.micro
+        instance_type: t2.nano
         security_group: Remote Access
         network:
           assign_public_ip: true
