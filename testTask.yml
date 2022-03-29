@@ -1,0 +1,17 @@
+---
+- name: Using ServiceNow Collection
+  hosts: localhost
+  gather_facts: no
+  collections:
+    - servicenow.servicenow
+  tasks:
+  - name: Grab User sys_id
+    snow_record:
+      username: ansible
+      password: Ansible1
+      instance: dev17663
+      state: present
+      number: a2961d1e2f020110795ad7492799b6da
+      table: sys_user
+      lookup_field: sys_id
+

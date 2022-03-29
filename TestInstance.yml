@@ -1,0 +1,21 @@
+# demo_setup.yml
+---
+- hosts: localhost
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision an EC2 instance with a public IP address
+      ec2_instance:
+        name: Demo 
+        key_name: "example-ssh-key"
+        region: eu-central-1
+        vpc_subnet_id: subnet-5ca1ab1e
+        instance_type: t2.micro
+        security_group: default
+        network:
+          assign_public_ip: true
+        image_id: ami-123456
+        tags:
+          Environment: Testing ansible connection with AWS
+      register: result
