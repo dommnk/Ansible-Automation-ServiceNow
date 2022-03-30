@@ -13,7 +13,7 @@
         key_name: "{{ key_name }}"
         region: eu-central-1
         vpc_subnet_id: "{{ vpc_subnet_id }}"
-        instance_type: t2.nano
+        instance_type: "{{ instance_type }}"
         security_group: Remote Access
         network:
           assign_public_ip: true
