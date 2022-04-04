@@ -7,7 +7,7 @@
 
     - name: Provision an EC2 instance with a public IP address
       ec2_instance:
-        name: Demo Instance from Ansible
+        name: " {{ instance_name }} "
         aws_access_key: "{{ec2_access_key}}"
         aws_secret_key: "{{ec2_secret_key}}"
         key_name: "{{ key_name }}"
@@ -20,4 +20,7 @@
         image_id: "{{ image_id }}"
         tags:
           Environment: Testing ansible connection with AWS
+          REQ Number : " {{ request_number }} "
+          RITM Number : " {{ requested_item_number }} "
       register: result
+
