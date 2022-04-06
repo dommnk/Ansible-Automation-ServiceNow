@@ -13,6 +13,7 @@
       password : "{{ password }}"
       instance : "{{ instance }}"
       number : "{{ request_number }}" 
-      short_desrciption : "Virtual machine created succesfully."
-      description : "This record has been updated by Ansible workflow."
-      request_state : closed_complete
+      data:
+        short_description : "Virtual machine created succesfully."
+        description : "This record has been updated by Ansible workflow."
+        request_state : closed_complete
