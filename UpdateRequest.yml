@@ -12,6 +12,7 @@
       username : "{{ username }}"
       password : "{{ password }}"
       instance : "{{ instance }}"
+      table : sc_request
       number : "{{ request_number }}" 
       state : present
       data:
