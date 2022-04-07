@@ -1,0 +1,21 @@
+---
+
+- name: Using ServiceNow Collection
+  hosts: localhost
+  gather_facts: no
+  collections:
+    - servicenow.servicenow
+
+  tasks:
+  - name: Update Request
+    snow_record:
+      username : "{{ username }}"
+      password : "{{ password }}"
+      instance : "{{ instance }}"
+      table : sc_request
+      number : "{{ request_number }}"
+      state : present
+      data:
+        short_description : "Failed to create Virtual Machine. Please check if AMI is appropiate and you have subscribed to that AMI."
+        description : "This record has been updated by Ansible workflow."
+        request_state : closed_cancelled
