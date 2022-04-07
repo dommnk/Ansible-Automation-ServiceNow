@@ -16,6 +16,6 @@
       number : "{{ request_number }}"
       state : present
       data:
-        short_description : "Failed to create Virtual Machine. Please check if AMI is appropiate and you have subscribed to that AMI."
+        short_description : "Failed to create Virtual Machine. Please check if AMI is appropiate and you have subscribed to that AMI. Check Ansible logs for more information."
         description : "This record has been updated by Ansible workflow."
         request_state : closed_cancelled
