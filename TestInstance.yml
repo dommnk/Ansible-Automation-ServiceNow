@@ -19,8 +19,10 @@
           assign_public_ip: true
         image_id: "{{ image_id }}"
         tags:
-          Environment: Testing ansible connection with AWS
+          Info : Virtual Machine Requested in ServiceNow
           REQ Number : " {{ request_number }} "
           RITM Number : " {{ requested_item_number }} "
+          Requested for : "{{ requested_for }}"
+          Opened at : "{{ opened_at }}"
       register: result
 
